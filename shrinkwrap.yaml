@@ -1,3 +1,5 @@
+dependencies:
+  eleventy-plugin-meta-generator: 0.1.3
 devDependencies:
   '@11ty/eleventy': 0.11.0
   '@11ty/eleventy-navigation': 0.1.6
@@ -841,6 +843,12 @@ packages:
     requiresBuild: true
     resolution:
       integrity: sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
+  /eleventy-plugin-meta-generator/0.1.3:
+    dev: false
+    peerDependencies:
+      '@11ty/eleventy': '>=0.8.x'
+    resolution:
+      integrity: sha512-07U0NhGCAkjDKuhlOhhgm+APu1+455HeeyIJKvc7Bs4SOsIy1DUJtkWN43vqpvsi7Wj8EcpygipDkxWxhb2F5Q==
   /emitter-mixin/0.0.3:
     dev: true
     resolution:
@@ -2864,6 +2872,7 @@ specifiers:
   '@11ty/eleventy-navigation': ^0.1.6
   '@11ty/eleventy-plugin-rss': ^1.0.9
   '@11ty/eleventy-plugin-syntaxhighlight': ^3.0.1
+  eleventy-plugin-meta-generator: ^0.1.1
   luxon: ^1.21.3
   markdown-it: ^8.4.2
   markdown-it-anchor: ^5.2.5
