@@ -1,20 +1,20 @@
 {
-  "title": "ab",
-  "url": "https://example.com/",
+  "title": "aboutDavid's website",
+  "url": "https://aboutdavid.me",
   "description": "I am writing about my experiences as a naval navel-gazer.",
   "feed": {
     "subtitle": "I am writing about my experiences as a naval navel-gazer.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://example.com/"
+    "id": "https://aboutdavid.me/"
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
-    "url": "https://example.com/feed/feed.json"
+    "url": "https://aboutdavid.me/feed/feed.json"
   },
   "author": {
-    "name": "Your Name Here",
-    "email": "youremailaddress@example.com",
-    "url": "https://example.com/about-me/"
+    "name": "aboutDavid",
+    "email": "aboutdavid@pm.me",
+    "url": "https://aboutdavid.me/about-me/"
   }
 }
