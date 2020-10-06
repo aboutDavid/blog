@@ -3,6 +3,6 @@
   command = "DEBUG=* eleventy && npx ipfs-deploy _site -p pinata -d cloudflare"
 [[redirects]]
   from = "/admin/config.yml"
-  to = "https://gistcdn.githack.com/aboutDavid/981f12f240f6475bc8a3c52295c96809/raw/54f36e014afcf6a23f1503cb94cb489bbc1bee05/config.yml"
+  to = "https://gist.githubusercontent.com/aboutDavid/981f12f240f6475bc8a3c52295c96809/raw/a6dd49228d2ae56b8cdec2faf56e5c6c72570a73/config.yml"
   status = 301
   force = true
