@@ -1,3 +1,8 @@
 [build]
   publish = "_site"
   command = "DEBUG=* eleventy && npx ipfs-deploy _site -p pinata -d cloudflare"
+[[redirects]]
+  from = "/admin/config.yml"
+  to = "https://gist.githubusercontent.com/aboutDavid/981f12f240f6475bc8a3c52295c96809/raw/4e6bacf91ded3e635a40a1254bca7d54f8639ad5/config.yml"
+  status = 301
+  force = true
