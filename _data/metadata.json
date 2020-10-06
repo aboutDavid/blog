@@ -1,9 +1,9 @@
 {
   "title": "aboutDavid's website",
   "url": "https://aboutdavid.me",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "description": "Hi, I'm David and here is where my blog lives.",
   "feed": {
-    "subtitle": "I am writing about my experiences as a naval navel-gazer.",
+    "subtitle": "Hi, I'm David and here is where my blog lives.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://aboutdavid.me/"
