@@ -3,7 +3,7 @@ layout: layouts/post.njk
 title: Why hacktoberfest is bad for everyone, not just devolopers.
 date: 2020-10-06T04:00:00.000Z
 description: Hacktoberfest is supposed to get new developers to make pull
-  requests, but that might not help anyone
+  requests, but that isn't helping anyone.
 featuredpost: true
 tags:
   - hacktoberfest
