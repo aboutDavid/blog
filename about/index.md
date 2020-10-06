@@ -6,5 +6,5 @@ eleventyNavigation:
   key: About Me
   order: 3
 ---
-
-I am a person that writes stuff.
+<cente
+![Profile Picture](https://gateway.pinata.cloud/ipfs/QmNR5ZNodGBQm8XmSpRVbrV8PwdkRL32xE3g2hYmVccZBR)
