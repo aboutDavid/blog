@@ -2,14 +2,11 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
-<<<<<<< HEAD
-=======
 <script defer src="https://comments.aboutdavid.me/js/commento.js"></script>
 <script>
-function calcrt(a){var b=Math.round(a.match(/.{1,5}/g).length/225);return b=0>=b?"Less than a minute read.":1===b?`${b} min read.`:isNaN(b)?"Failed to calculate readtime!":"Failed to calculate readtime!",b}
-</script>
+function calcrt(a){var b=a/225;return b=0>=b?"Less than a minute read.":1===b?`${b} min read.`:isNaN(b)?"Failed to calculate readtime!":"Failed to calculate readtime!",b}</script>
 <h1>{{ title }}</h1>
-<small><div id="date"></div> | <div id="rt"></div></small>
+<small id="inject"></small>
 
 {{ content | safe }}
 
@@ -23,6 +20,5 @@ function calcrt(a){var b=Math.round(a.match(/.{1,5}/g).length/225);return b=0>=b
 <div id="commento"></div>
 <script>
 var d = new Date("{{ date }}")
-document.getElementById("date").innerHTML = `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}`;
-document.getElementById("rt").innerHTML = calcrt(`{{ content }}`.replace( /[\r\n]+/gm, "" ));
+document.getElementById("inject").innerHTML = `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}, ${calcrt({{ content | wordcount }})}`;
 </script>
