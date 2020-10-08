@@ -4,7 +4,8 @@ templateClass: tmpl-post
 ---
 <script defer src="https://comments.aboutdavid.me/js/commento.js"></script>
 <script>
-function calcrt(a){var b=Math.round(a.match(/.{1,5}/g).length/225);return b=0>=b?"Less than a minute read.":1===b?`${b} min read.`:isNaN(b)?"Failed to calculate readtime!":"Failed to calculate readtime!",b}</script>
+function calcrt(a){var b=Math.round(a.match(/.{1,5}/g).length/225);return console.log(b),b=0>=b?"Less than a minute read.":isNaN(b)?"Failed to calculate readtime!":`${b} min read.`,b}
+</script>
 <h1>{{ title }}</h1>
 <small id="inject"></small>
 
@@ -20,5 +21,7 @@ function calcrt(a){var b=Math.round(a.match(/.{1,5}/g).length/225);return b=0>=b
 <div id="commento"></div>
 <script>
 var d = new Date("{{ date }}")
-document.getElementById("inject").innerHTML = `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}, ${calcrt("{{ content}}".replace("\n", ""))}`;
+var rt = calcrt("{{ content | replace("\n", "") | replace('"', '')}}")
+console.log(rt)
+document.getElementById("inject").innerHTML = `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}, ` + rt;
 </script>
