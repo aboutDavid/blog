@@ -22,5 +22,5 @@ function calcrt(a){var b=Math.round(a.match(/.{1,5}/g).length/225);return b=0>=b
 <script>
 var d = new Date("{{ date }}")
 document.getElementById("date").innerHTML = `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}`;
-document.getElementById("rt").innerHTML = calcrt(`{{ content }}`);
+document.getElementById("rt").innerHTML = calcrt(`{{ content }}`.replace( /[\r\n]+/gm, "" ));
 </script>
