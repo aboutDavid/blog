@@ -21,7 +21,6 @@ function calcrt(a){var b=Math.round(a/225);return 0>=b?b="Less than a minute rea
 <div id="commento"></div>
 <script>
 var d = new Date("{{ date }}")
-var rt = calcrt("{{ content | replace("\n", "") }}")
-console.log(rt)
-document.getElementById("inject").innerHTML = `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}, ` + rt.replace(/&\w+;/gm, "");
+var rt = calcrt({{ content | wordcount }})
+document.getElementById("inject").innerHTML = `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}, ` + rt;
 </script>
