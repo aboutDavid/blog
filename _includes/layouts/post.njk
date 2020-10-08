@@ -4,7 +4,7 @@ templateClass: tmpl-post
 ---
 <script defer src="https://comments.aboutdavid.me/js/commento.js"></script>
 <script>
-function calcrt(a){var b=Math.round(a.match(/.{1,5}/g).length/225);return console.log(b),b=0>=b?"Less than a minute read.":isNaN(b)?"Failed to calculate readtime!":`${b} min read.`,b}
+function calcrt(a){var b=Math.round(a/225);return 0>=b?b="Less than a minute read.":isNaN(b)?(b="Failed to calculate readtime!",console.error(b)):b=`${b} min read.`,b}
 </script>
 <h1>{{ title }}</h1>
 <small id="inject"></small>
