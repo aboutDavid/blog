@@ -21,7 +21,7 @@ function calcrt(a){var b=Math.round(a.match(/.{1,5}/g).length/225);return consol
 <div id="commento"></div>
 <script>
 var d = new Date("{{ date }}")
-var rt = calcrt("{{ content | replace("\n", "") | replace('"', '')}}")
+var rt = calcrt("{{ content | replace("\n", "") }}")
 console.log(rt)
-document.getElementById("inject").innerHTML = `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}, ` + rt;
+document.getElementById("inject").innerHTML = `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}, ` + rt.replace(/&\w+;/gm, "");
 </script>
