@@ -2,7 +2,15 @@
 layout: layouts/base.njk
 templateClass: tmpl-post
 ---
+<<<<<<< HEAD
+=======
+<script defer src="https://comments.aboutdavid.me/js/commento.js"></script>
+<script>
+function calcrt(a){var b=Math.round(a.match(/.{1,5}/g).length/225);return b=0>=b?"Less than a minute read.":1===b?`${b} min read.`:isNaN(b)?"Failed to calculate readtime!":"Failed to calculate readtime!",b}
+</script>
+>>>>>>> 4ed45db31dd8739c01c72fd6902e5ea166ba222d
 <h1>{{ title }}</h1>
+<small><div id="date"></div> | <div id="rt"></div></small>
 
 {{ content | safe }}
 
@@ -14,3 +22,8 @@ templateClass: tmpl-post
   {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
 </ul>
 <div id="commento"></div>
+<script>
+var d = new Date("{{ date }}")
+document.getElementById("date").innerHTML = `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}`;
+document.getElementById("rt").innerHTML = calcrt(`{{ content }}`.replace( /[\r\n]+/gm, "" ));
+</script>
