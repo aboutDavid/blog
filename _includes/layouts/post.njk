@@ -8,7 +8,6 @@ templateClass: tmpl-post
 <script>
 function calcrt(a){var b=Math.round(a.match(/.{1,5}/g).length/225);return b=0>=b?"Less than a minute read.":1===b?`${b} min read.`:isNaN(b)?"Failed to calculate readtime!":"Failed to calculate readtime!",b}
 </script>
->>>>>>> 4ed45db31dd8739c01c72fd6902e5ea166ba222d
 <h1>{{ title }}</h1>
 <small><div id="date"></div> | <div id="rt"></div></small>
 
