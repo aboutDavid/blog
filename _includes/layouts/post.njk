@@ -20,6 +20,6 @@ function calcrt(a){var b=Math.round(a/200);return 0>=b?b="Less than a minute rea
 <div id="commento"></div>
 <script>
 var d = new Date("{{ date }}")
-var rt = calcrt({{ content | wordcount }})
+var rt = calcrt({{ content | wordcount }}/2)
 document.getElementById("inject").innerHTML = `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}, ` + rt;
 </script>
