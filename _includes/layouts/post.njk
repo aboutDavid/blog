@@ -3,7 +3,7 @@ layout: layouts/base.njk
 templateClass: tmpl-post
 ---
 <script>
-function calcrt(a){var b=Math.round(a/225);return 0>=b?b="Less than a minute read.":isNaN(b)?(b="Failed to calculate readtime!",console.error(b)):b=`${b} min read.`,b}
+function calcrt(a){var b=Math.round(a/200);return 0>=b?b="Less than a minute read.":isNaN(b)?(b="Failed to calculate readtime!",console.error(b)):b=`${b} min read.`,b}
 </script>
 <h1>{{ title }}</h1>
 <small id="inject"></small>
